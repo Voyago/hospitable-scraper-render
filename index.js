@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -37,7 +37,6 @@ const puppeteer = require('puppeteer-core');
     timeout: 0
   });
 
-  // Capturar contenido
   const data = await page.evaluate(() => document.body.innerText);
   console.log('📦 Contenido capturado:\n', data);
 
