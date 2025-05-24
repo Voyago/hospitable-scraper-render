@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
 
   const page = await browser.newPage();
 
-  // Iniciar sesión (si es necesario)
+  // Iniciar sesión
   await page.goto('https://my.hospitable.com/user/hello?returnUrl=%2Fdashboard', {
     waitUntil: 'networkidle2',
     timeout: 0
